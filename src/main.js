@@ -1,3 +1,5 @@
+import './style.css';
+
 const first = document.querySelector('#number1');
 const second = document.querySelector('#number2');
 

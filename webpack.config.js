@@ -9,8 +9,8 @@ module.exports = {
   devtool: "source-map",
 
   entry: {
-    main: "./src/main.js",
-    worker: "./src/worker.js",
+    main: "./src/main.ts",
+    worker: "./src/worker.ts",
   },
 
   output: {
@@ -25,12 +25,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.[jt]s$/,
         loader: "esbuild-loader",
-        // options: {
-        //   loader: "tsx",
-        //   target: "es6",
-        // },
+        options: {
+          loader: "tsx",
+          target: "es6",
+        },
       },
       {
         test: /\.css$/,

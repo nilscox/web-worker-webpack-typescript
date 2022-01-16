@@ -1,9 +1,9 @@
 import './style.css';
 
-const first = document.querySelector('#number1');
-const second = document.querySelector('#number2');
+const first = document.querySelector("#number1") as HTMLInputElement;
+const second = document.querySelector("#number2") as HTMLInputElement;
 
-const result = document.querySelector('.result');
+const result = document.querySelector(".result") as HTMLParagraphElement;
 
 if (window.Worker) {
   const myWorker = new Worker("worker.js");
